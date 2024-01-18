@@ -103,6 +103,17 @@ const scrollPageByGalleryCardHeight = () => {
   }
 };
 
+const showEndOfResultsMessage = () => {
+  iziToast.info({
+    position: 'topRight',
+    messageColor: '#FFFFFF',
+    backgroundColor: '#36B3D9',
+    titleSize: '8px',
+    closeOnEscape: true,
+    message: "We're sorry, but you've reached the end of search results.",
+  });
+};
+
 const getImages = async (query, page) => {
   try {
     const response = await axios.get(
